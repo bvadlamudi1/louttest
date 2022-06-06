@@ -1,0 +1,30 @@
+<html>
+  <script src="https://wft-bitwisecommunity.cs1.force.com/lightning/lightning.out.js"></script>
+
+  <div data-lightning-out="true"></div>
+  <script>
+    const appName = "c:WftPublicApp";
+    const componentName = "c:wftAttendanceTable2";
+  </script>
+
+  <div id="LightningAppDivId">
+    <!-- Lightning Component will be included here. -->
+  </div>
+  <script>
+    $Lightning.use(
+      "c:WftPublicApp", // name of the Lightning app
+      function () {
+        // Callback once framework and app loaded
+        $Lightning.createComponent(
+          "c:wftAttendanceTable2", // top-level component of your app
+          {}, // attributes to set on the component when created
+          "LightningAppDivId", // the DOM location to insert the component
+          function (cmp) {
+            // callback when component is created and active on the page
+          }
+        );
+      },
+      "https://wft-bitwisecommunity.cs1.force.com" // Experience Cloud site endpoint
+    );
+  </script>
+</html>
